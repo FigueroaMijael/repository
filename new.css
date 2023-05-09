@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    height: 4rem;
+    background: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.logo__container {
+    width: auto;
+    margin: 0 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ;
+}
+
+.logo {
+    width: auto;
+    height: 50px;
+    color: rgb(0, 255, 255);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ;
+}
+
+.logo__container:hover{
+    font-weight: 900;
+    transform: scale(1.2);  
+
+}
+
+.logo:hover {
+    color: aquamarine;
+}
+
+.nav__link li {
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.5s;
+  
+}
+
+.nav__link li:hover {
+    transform: scale(1.1);
+}
+
+.nav__link li a {
+    transition: 1s;
+    margin: 0 3rem;
+}
+
+.nav__link li a:hover {
+ color: rgb(255, 145, 0);
+}
+
+.sub__nav__link {
+    display: none; 
+    cursor: pointer;
+}
+
+ .mostrar__sub__nav:hover > .sub__nav__link {
+    display: block;
+    position: absolute;
+    background-color: gray;
+    padding: 1rem 0;
+    box-shadow: 10px 10px 5px;
+}
+
+.sub__link {
+    color: black;
+    font-size: 1rem ;
+}
+
+
+.btn {
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    background-color: rgb(223, 131, 11);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.btn:hover {
+    background-color: aqua;
+}
+
+/* BANNER ONE */
+.banner__container {
+    width: 100%;
+    height: 30rem;
+    background-image: url('/assets/img/ferrari-5.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 10;
+}
+
+.banner__section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(3, 1fr) ;
+    width: 100%;
+    grid-template-areas:
+    " title title title ..."
+    " p       p       p   ..."
+    "button ... ... ..."
+;
+}
+
+.banner__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    grid-area: title;
+}
+
+.banner__p {
+    font-weight: 600;
+    text-transform: uppercase;
+    grid-area: p;
+
+}
+
+.banner__button {
+    font-weight: 600;
+    text-transform: uppercase;
+    grid-area: button;
+}
